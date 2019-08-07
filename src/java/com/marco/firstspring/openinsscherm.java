@@ -19,7 +19,7 @@ public class openinsscherm implements CommandLineRunner {
 
 
         Object[] options = {"Gambling",
-                "Util 1",
+                "Open DB connection",
                 "Util 2"};
         Integer Choice = JOptionPane.showOptionDialog(null,
                 "Which app do you want to use?",
@@ -32,11 +32,17 @@ public class openinsscherm implements CommandLineRunner {
 
         out.println(Choice);
 
+        // choice 0 goes to Marco2 method
+
         if (Choice.equals(0)){
             Marco2 m = new Marco2();
             m.mainMethod();}
 
+        // choice 1 goes to dbconnection method
 
+        if (Choice.equals(1)){
+            dbconnection x = new dbconnection();
+            x.mainMethod2();}
 
         else {out.println("not yet available");}
     }
