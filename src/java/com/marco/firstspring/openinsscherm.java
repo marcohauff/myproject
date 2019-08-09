@@ -20,7 +20,7 @@ public class openinsscherm implements CommandLineRunner {
 
         Object[] options = {"Gambling",
                 "Open DB connection",
-                "Util 2"};
+                "TH call"};
         Integer Choice = JOptionPane.showOptionDialog(null,
                 "Which app do you want to use?",
                 "Marco's Apps",
@@ -43,6 +43,10 @@ public class openinsscherm implements CommandLineRunner {
         if (Choice.equals(1)){
             dbconnection x = new dbconnection();
             x.mainMethod2();}
+
+        if (Choice.equals(2)){
+           SendJason y = new SendJason();
+           y.Post_JSON();}
 
         else {out.println("not yet available");}
     }

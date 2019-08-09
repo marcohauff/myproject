@@ -9,25 +9,15 @@ import org.json.JSONObject;
 
 
 public class SendJason {
-    public static void main(String[] args) {
-        SendJason.Post_JSON();
-    }
-    public static void Post_JSON() {
+   // public static void main(String[] args) {
+   //     SendJason.Post_JSON();
+   // }
+  //  public static void Post_JSON() {
+        public void Post_JSON() {
         String query_url = "https://int-travelhub.gcsip.nl/travelhub/api/tpa/v1/paymentMethods";
-        //String json = "{ \"method\" : \"guru.test\", \"params\" : [ \"jinu awad\" ], \"id\" : 123 }";
-        //String json = "{ \"method\" : \"guru.test\", \"params\" : [ \"Marco\" ], \"id\" : 123 }";
-
-        // header info needed
-
-       // "headers": {
-       //     "Accept": "application/json",
-       //             "Content-Type": "application/json",
-       //             "Authorization": "Basic MjZhZjZiMTdjZTE5NWIwZDozMjFjNzc2M2Q0MzAwNTk1"
-
-
         String json = "{\n  \"merchantId\" : \"23456780\"\n}";
 
-       // con.setRequestProperty( "Authorization", "Basic " + encoder.encode( encodedPassword ) )
+
 
         System.out.println(json);
 
