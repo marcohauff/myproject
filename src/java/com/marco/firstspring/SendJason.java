@@ -9,10 +9,7 @@ import org.json.JSONObject;
 
 
 public class SendJason {
-   // public static void main(String[] args) {
-   //     SendJason.Post_JSON();
-   // }
-  //  public static void Post_JSON() {
+
         public void Post_JSON() {
         String query_url = "https://int-travelhub.gcsip.nl/travelhub/api/tpa/v1/paymentMethods";
         String json = "{\n  \"merchantId\" : \"23456780\"\n}";
@@ -39,13 +36,19 @@ public class SendJason {
             System.out.println(result);
             System.out.println("result after Reading JSON Response");
             JSONObject myResponse = new JSONObject(result);
-            System.out.println("jsonrpc- "+myResponse.getString("jsonrpc"));
-            System.out.println("id- "+myResponse.getInt("id"));
-            System.out.println("result- "+myResponse.getString("result"));
+
+
+            System.out.println("antwoord"+myResponse.get("paymentMethod"));
             in.close();
             conn.disconnect();
         } catch (Exception e) {
             System.out.println(e);
+
+          // include code to go back to main screen
+
+          //  MarcoSpringApplication x = new MarcoSpringApplication();
+         //   x.main();
+
         }
     }
 }
